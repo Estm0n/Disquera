@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://wwww.thymeleaf.org" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verc</title>
+    </head>
+
+<body>
+    <div class="contenido">
+        <table class="table table-stripped">
+            <thead>
+                <th>No.</th>
+                <th>Nombre Album</th>
+                <th>Fecha Publicación</th>  
+            </thead>
+            <tbody>
+                <tr th:each="album:${genero.album}">
+                    <td th:text="${album.id}"></td>
+                    <td th:text="${album.nombre_album}"></td>
+                    <td th:text="${album.anio_publicacion}"></td>
+                </tr>
+            </tbody>
+    </div>
+
+</body>
+
+</html>

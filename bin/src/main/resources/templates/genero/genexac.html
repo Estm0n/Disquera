@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://wwww.thymeleaf.org" lang="es"></html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generos</title>
+
+</head>
+<body>
+
+    <div>
+        <p th:text="${genero.idGenero}"></p>
+        <p th:text="${genero.nombreGenero}"></p>
+        <p th:text="${genero.estadoGenero}"></p>
+        <span class="badge bg-success active" th:if="${genero.estadoGenero==true}">Activo</span>
+        <span class="badge bg-danger active" th:if="${genero.estadoGenero==false}">Inactivo</span>
+    </div>
+    
+</body>
+</html>

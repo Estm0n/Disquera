@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://wwww.thymeleaf.org" lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verc</title>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+<body>
+
+        <section>
+    
+    <div class="contenido">
+        <table class="table table-stripped">
+            <thead>
+                <th>id</th>
+                <th>Nombre Cancion</th>
+                <th>Duración</th>
+            </thead>
+            <tbody>
+                <tr th:each="c:${album.cancion}">
+                    <td th:text="${c.id}"></td>
+                    <td th:text="${c.nombre_cancion}"></td>
+                    <td th:text="${c.duracion_min}"></td>
+                </tr>
+            </tbody>
+    </div>
+    </section>
+
+</body>
+
+</html>
